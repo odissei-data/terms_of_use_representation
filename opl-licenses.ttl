@@ -1,0 +1,36 @@
+@prefix lic: <http://ontology-policy-license/licenses> .
+@prefix opl: <http://ontology-policy-license> .
+
+
+lic:cc0License      a                   opl:License ;
+                    opl:legalTerms      "http://creativecommons.org/publicdomain/zero/1.0/legalcode" ;
+                    opl:uid             "1" ;
+                    opl:permits         opl:publishing,
+                                        opl:distribution,
+                                        opl:derivative,
+                                        opl:commercialUse,
+                                        opl:academicUse,
+                                        opl:privateUse .
+
+
+lic:ccByLicense     a                   opl:License ;
+                    opl:legalTerms      "http://creativecommons.org/licenses/by/4.0" ;
+                    opl:uid             "2" ;
+                    opl:permits         opl:publishing,
+                                        opl:distribution,
+                                        opl:derivative,
+                                        opl:commercialUse,
+                                        opl:academicUse,
+                                        opl:privateUse ;
+                    opl:requires        opl:attribution .
+
+
+lic:dansLicense     a                   opl:License ;
+                    opl:legalTerms      "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
+                    opl:uid             "3" ;
+                    opl:permits         opl:publishing,
+                                        opl:derivative,
+                                        opl:academicUse ;
+                    opl:prohibits       opl:distribution,
+                                        opl:commercialUse,
+                                        opl:privateUse .

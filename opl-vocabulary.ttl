@@ -1,0 +1,187 @@
+@prefix opl:    <http://ontology-policy-license> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
+
+
+opl:
+        a                   owl:Ontology ;
+        rdfs:label          "OPL Version 0.1"@en ;
+        owl:versionInfo     "0.1" ;
+        dct:creator         "Margherita Martorana" ;
+        dct:description     "OPL Ontology"@en ;
+        rdfs:comment        "RDF ontology for OPL Version 0.1"@en .
+
+
+opl:UsageTerms
+        a                   rdfs:Class, owl:Class, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "UsageTerms"@en ;
+        skos:definition     "Usage terms related the Dataset"@en .
+
+
+opl:AccessibilityTerms
+        a                   rdfs:Class, owl:Class, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:subClassOf     :UsageTerms ;
+        rdfs:label          "AccessibilityTerms"@en ;
+        skos:definition     "The Accessibility Terms related of a Dataset"@en .
+
+
+opl:License
+        a                   rdfs:Class, owl:Class, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:subClassOf     :UsageTerms ;
+        rdfs:label          "License"@en ;
+        skos:definition     "A non-empty group of Permissions and/or Prohibitions."@en .
+
+
+opl:LicenseTerms
+        a                   rdfs:Class, owl:Class, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:subClassOf     :License ;
+        rdfs:label          "LicenseTerms"@en ;
+        skos:definition     "Description of actions that are/aren't allowed."@en .        
+
+
+opl:hasUsageTerms   
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "hasUsageTerms"@en ;
+        skos:definition     "Identifies the usage terms targeting the Dataset"@en ;
+        rdfs:domain         dcat:Dataset ;
+        rdfs:range          opl:License, opl:AccessibilityTerms .
+
+
+opl:requestAccess  
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "requestAccess"@en ;
+        skos:definition     "Information about where to request access if required"@en ;
+        rdfs:domain         opl:AccessibilityTerms ;
+        rdfs:range          xsd:string .
+
+
+opl:legalTerms
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "legalTerms"@en ;
+        skos:definition     "Identifies the legal terms targeting the License"@en ;
+        rdfs:domain         opl:License ;
+        rdfs:range          xsd:string .
+
+
+opl:uid    
+        a                   rdf:Property, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "uid"@en ;
+        skos:definition     "A unique identifier for the License"@en ;
+        rdfs:domain         opl:License ;
+        rdfs:range          xsd:string .
+
+
+opl:permits
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "permits"@en ;
+        skos:definition     "Defines what License Terms are allowed on the dataset"@en ;
+        rdfs:domain         opl:License ;
+        rdfs:range          opl:LicenseTerms .
+
+
+opl:prohibits
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "prohibits"@en ;
+        skos:definition     "Defines what License Terms are not allowed on the dataset"@en ;
+        rdfs:domain         opl:License ;
+        rdfs:range          opl:LicenseTerms .
+
+
+opl:requires
+        a                   rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "requires"@en ;
+        skos:definition     "Defines what License Terms are required on the dataset"@en ;
+        rdfs:domain         opl:License ;
+        rdfs:range          opl:LicenseTerms .
+
+
+opl:accessible
+        a                   opl:AccessibilityTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "accessible"@en ;
+        skos:definition     "Defines that the Dataset is accessible"@en .
+
+
+opl:accessibleWithRegistration
+        a                   opl:AccessibilityTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "accessibleWithRegistration"@en ;
+        skos:definition     "Defines that the Dataset is accessible with registration"@en .
+
+
+opl:restricted
+        a                   opl:AccessibilityTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "restricted"@en ;
+        skos:definition     "Defines that the Dataset is restricted"@en .
+
+
+opl:otherAccess
+        a                   opl:AccessibilityTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "otherAccess"@en ;
+        skos:definition     "Defines that the Dataset has other types of access"@en .
+
+
+opl:publishing
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "publishing"@en ;
+        skos:definition     "Defines the License Term Publishing"@en .
+
+
+opl:distribution
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "publishing"@en ;
+        skos:definition     "Defines the License Term Distribution"@en .
+
+
+opl:derivative
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "derivative"@en ;
+        skos:definition     "Defines the License Term Derivative"@en .
+
+
+opl:attribution
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "attribution"@en ;
+        skos:definition     "Defines the License Term Attribution"@en .
+
+
+opl:commercialUse
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "commercialUse"@en ;
+        skos:definition     "Defines the License Term Commercial Use"@en .
+
+
+opl:academicUse
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "academicUse"@en ;
+        skos:definition     "Defines the License Term Academic Use"@en .
+
+
+opl:privateUse
+        a                   opl:LicenseTerms, skos:concept ;
+        rdfs:isDefinedBy    opl: ;
+        rdfs:label          "privateUse"@en ;
+        skos:definition     "Defines the License Term Private Use"@en .
