@@ -33,7 +33,15 @@ opl:hasAccess
         rdfs:domain odrl:Asset ;
         rdfs:range opl:AccessibilityTerm .
 
+opl:requestAccess       
+        a rdf:Property, owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy opl: ;
+        rdfs:label "Request Access"@en ;
+        skos:definition "Define details on how access can be requested for not Accessible Assets."@en ;
+        skos:note "The Asset being identified MUST be inferred to be the target Asset of the request Access."@en ;
+        rdfs:domain odrl:Asset .   
 
+        
 ## Collective Vocabulary
 
 opl:NonEndorsement      
