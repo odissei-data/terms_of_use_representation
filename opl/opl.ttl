@@ -99,6 +99,13 @@ opl:OtherAccess
         skos:definition         "Defines that the Asset is Accessible through another provider."@en ;
         skos:note               "This term is defined by OPL."@en .   
 
+opl:NotAvailable
+        a                       odrl:AccessibilityTerm, skos:Concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Not Available"@en ;
+        skos:definition         "Defines that the Asset is Not Available"@en ;
+        skos:note               "This term is defined by OPL."@en .                          
+
 
 ## Licenses 
 
@@ -376,12 +383,116 @@ opl:taprOhl
                                 cc:Attribution .                    
 
 opl:dansLicense     
-        a                       opl:License ;
-        opl:legalTerms          "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
-        opl:uid                 "3" ;
-        opl:permits             opl:publishing,
-                                opl:derivative,
-                                opl:academicUse ;
-        opl:prohibits           opl:distribution,
-                                opl:commercialUse,
-                                opl:privateUse .
+        a                       odrl:Policy ;
+        odrl:uid                "DANS License" ;
+        odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
+        odrl:permission         cc:Reproduction,
+                                cc:DerivativeWorks,
+                                opl:AcademicUse ;
+        odrl:prohibition        cc:Distribution,
+                                cc:CommericalUse ;
+        odrl:obligation         cc:Attribution .
+
+opl:cessda0                     
+        a                       odrl:Policy ;
+        odrl:uid                "CESSDA-0" ;
+        odrl:source             "https://datacatalogue.cessda.eu" ;
+        odrl:permission         cc:DerivativeWorks,
+                                cc:Reproduction,
+                                cc:Distribution,
+                                cc:CommericalUse,
+                                opl:AcademicUse,
+                                opl:PrivateUse .
+
+opl:cessda1
+        a                       odrl:Policy ;
+        odrl:uid                "CESSDA-NSD-Open" ;
+        odrl:source             "https://datacatalogue.cessda.eu" ;
+        opl:requestAccess       "https://www.nsd.no/en/" ;
+        odrl:permission         opl:AcademicUse .
+
+opl:cessda2
+        a                       odrl:Policy ;
+        odrl:uid                "CESSDA-NSD-GeoRestriction" ;
+        odrl:source             "https://datacatalogue.cessda.eu" ;
+        opl:requestAccess       "https://www.nsd.no/en/" ;
+        odrl:permission         opl:AcademicUse ;
+        odrl:obligation         [
+                odrl:constraint         odrl:leftOperand ;
+                odrl:leftOperand        odrl:spatial ;
+                odrl:operator           odrl:eq ;
+                odrl:rightOperand       "NO"@value,
+                                        "iso3166"@type ;
+        ] .                     
+
+opl:cessda3
+        a                       odrl:Policy ;
+        odrl:uid                "CESSDA-UKDS" ;
+        odrl:source             "https://datacatalogue.cessda.eu" ;
+        opl:requestAccess       "https://www.ukdataservice.ac.uk" ;
+        odrl:permission         cc:Reproduction,
+                                cc:Distribution,
+                                cc:DerivativeWorks,
+                                cc:CommericalUse,
+                                opl:AcademicUse,
+                                opl:PrivateUse .
+
+opl:cessda4
+        a                       odrl:Policy ;
+        odrl:uid                "CESSDA-UKDS-GeoRestriction" ;
+        odrl:source             "https://datacatalogue.cessda.eu" ;
+        opl:requestAccess       "https://www.ukdataservice.ac.uk" ;
+        odrl:prohibition        cc:CommericalUse ;
+        odrl:obligation         [
+                odrl:constraint         odrl:leftOperand ;
+                odrl:leftOperand        odrl:spatial ;
+                odrl:operator           odrl:eq ;
+                odrl:rightOperand       "AT"@value,
+                                        "BE"@value,
+                                        "BG"@value,
+                                        "HR"@value,
+                                        "CY"@value,
+                                        "CZ"@value,
+                                        "DK"@value,
+                                        "EE"@value,
+                                        "FI"@value,
+                                        "FR"@value,
+                                        "DE"@value,
+                                        "GR"@value,
+                                        "HU"@value,
+                                        "IE"@value,
+                                        "IT"@value,
+                                        "LV"@value,
+                                        "LT"@value,
+                                        "LU"@value,
+                                        "MT"@value,
+                                        "NL"@value,
+                                        "PL"@value,
+                                        "PT"@value,
+                                        "RO"@value,
+                                        "SK"@value,
+                                        "SI"@value,
+                                        "ES"@value,
+                                        "SE"@value,
+                                        "AD"@value,
+                                        "AR"@value,
+                                        "FO"@value,
+                                        "GG"@value,
+                                        "IM"@value,
+                                        "IL"@value,
+                                        "JP"@value,
+                                        "JE"@value,
+                                        "NZ"@value,
+                                        "CH"@value,
+                                        "UY"@value,
+                                        "iso3166"@type ;
+        ] .
+
+
+
+
+        
+
+
+
+            
