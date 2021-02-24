@@ -18,7 +18,7 @@ opl:
 
 ## Access
 
-opl:AccessibilityTerm
+opl:AccessibilityTerms
         a                       rdfs:Class , owl:Class, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Access"@en ;
@@ -32,7 +32,7 @@ opl:hasAccess
         skos:definition         "Identifies an OPL Accessibility Term Policy for which the identified Asset is the target Asset."@en ;
         skos:note               "The Asset being identified MUST be inferred to be the target Asset of the Accesibility Term."@en ;
         rdfs:domain             odrl:Asset ;
-        rdfs:range              opl:AccessibilityTerm .
+        rdfs:range              opl:AccessibilityTerms .
 
 opl:requestAccess       
         a                       rdf:Property, owl:ObjectProperty, skos:Concept ;
@@ -42,8 +42,125 @@ opl:requestAccess
         skos:note               "The Asset being identified MUST be inferred to be the target Asset of the request Access."@en ;
         rdfs:domain             odrl:Asset .   
 
-        
-## Collective Vocabulary
+
+## Attribution Class
+
+opl:Attribution 
+        a                       rdfs:Class , owl:Class, skos:Concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:subClassOf         odrl:Action ;
+        rdfs:label              "Attribution"@en ;
+        skos:definition         "Collection of Attribution types."@en .
+
+opl:AttributionTerms
+        a                       rdfs:Class , owl:Class, skos:Concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:subClassOf         odrl:Attribution ;
+        rdfs:label              "Attribution Terms"@en ;
+        skos:definition         "Collection of attribution action types."@en .
+
+opl:hasAttribution
+        a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Has Attribution"@en ;
+        skos:definition         "Collection of attribution action types."@en ;
+        rdfs:domain             odrl:Policy ;
+        rdfs:range              opl:Attribution .
+
+opl:hasAttributionFormat
+        a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Has Attribution Format"@en ;
+        skos:definition         "Description of the format regarding Attribution."@en ;
+        rdfs:domain             odrl:Attribution .
+
+
+## Collective Attribution Terms Vocabulary
+
+opl:CreatorAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Creator Attribution"@en ;
+        skos:definition         "Name(s) of the person(s) and/or organisations who produced the dataset." ;
+        odrl:includedIn         opl:AttributionTerms .
+
+opl:YearAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Year Attribution"@en ;
+        skos:definition         "Year in which the dataset has been produced." ;
+        odrl:includedIn         opl:AttributionTerms .        
+
+opl:TitleAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Title Attribution"@en ;
+        skos:definition         "Title of the dataset." ;
+        odrl:includedIn         opl:AttributionTerms .   
+
+opl:ArchiveNameAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Archive Name Attribution"@en ;
+        skos:definition         "The Name of the Archive in which the dataset has been deposited." ;
+        odrl:includedIn         opl:AttributionTerms .   
+
+opl:IdentifierAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Identifier Attribution"@en ;
+        skos:definition         "The persistent Identifier of the dataset, preceded by 'http://persistent-identifier.nl'." ;
+        odrl:includedIn         opl:AttributionTerms . 
+
+opl:CopyrightNoticeAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Copyright Notice Attribution"@en ;
+        skos:definition         "The Copyright Notice applied to the dataset." ;
+        odrl:includedIn         opl:AttributionTerms . 
+
+opl:LicenseNoticeAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "License Notice Attribution"@en ;
+        skos:definition         "The License Notice applied to the dataset." ;
+        odrl:includedIn         opl:AttributionTerms . 
+
+opl:DisclaimerNoticeAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Disclaimer Notice Attribution"@en ;
+        skos:definition         "The Disclaimer Notice applied to the dataset." ;
+        odrl:includedIn         opl:AttributionTerms .
+
+opl:LinkAttribution
+        a                       opl:AttributionTerms, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Link Attribution"@en ;
+        skos:definition         "The Link by which the dataset can be found." ;
+        odrl:includedIn         opl:AttributionTerms .
+
+
+## Attribution types
+
+opl:dansAttribution
+        a                               opl:Attribution ;
+        opl:hasAttribution              opl:CreatorAttribution,
+                                        opl:YearAttribution,
+                                        opl:TitleAttribution,
+                                        opl:ArchiveNameAttribution,
+                                        opl:IdentifierAttribution .
+        opl:hasAttributionFormat        "Doorn, dr P.K.; Bommeljé, drs L.S.; Vroom, dr J.A.C.; Wijngaarden, drs H. van; Bommeljé, drs Y.B. (1990): The Aetolian Studies Project. DANS. https://doi.org/10.17026/dans-xxu-6utq" .
+
+opl:ccAttribution
+        a                       opl:Attribution ;
+        opl:hasAttribution      opl:CreatorAttribution,
+                                opl:CopyrightNoticeAttribution,
+                                opl:LicenseNoticeAttribution,
+                                opl:LinkAttribution .
+
+
+## Collective Policy Vocabulary
 
 opl:NonEndorsement      
         a                       odrl:Action, skos:concept ;
@@ -52,6 +169,86 @@ opl:NonEndorsement
         skos:definition         "Clause that prohibit the use of the Asset's name or Asset Owner's name in promotion."@en ;
         odrl:includedIn         odrl:use ;
         skos:scopeNote          "Non-Normative"@en .    
+
+opl:IncludeNotice
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Include Notice"@en ;
+        skos:definition         "Must include original Notice file (if present) when distributing."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .
+
+opl:IncludeLicense
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Include License"@en ;
+        skos:definition         "Must include original License text when distributing modified version of the Asset."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .
+
+opl:IncludeCopyright
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Include Copyright"@en ;
+        skos:definition         "Must include original Copyright when distributing."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .
+
+opl:IncludeOriginal
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Include Original"@en ;
+        skos:definition         "Must include Original Asset when distributing."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .
+
+opl:IncludeInstructions
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Include Instructions"@en ;
+        skos:definition         "Must include Asset Instructions when distributing."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .   
+
+opl:DiscloseChanges
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Disclose Changes"@en ;
+        skos:definition         "Disclose any significant Changes made to the Asset."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en . 
+
+opl:ApplyWarranty
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Apply Warranty"@en ;
+        skos:definition         "Ability to apply Warranty to the Asset."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en . 
+
+opl:SubLicense
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Sub-License"@en ;
+        skos:definition         "The Asset can be included in modified work where more restrictive licensing applies."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en . 
+
+opl:Liability
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Liability"@en ;
+        skos:definition         "The Asset owner can be charged for damages."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en .
+
+opl:PatentClaim
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        odrl: ;
+        rdfs:label              "Liability"@en ;
+        skos:definition         "Patent Claim can be applied to contributors of the Asset."@en ;
+        odrl:includedIn         odrl:use ;
+        skos:scopeNote          "Non-Normative"@en . 
 
 opl:AcademicUse
         a                       odrl:Action, skos:Concept ;
@@ -72,35 +269,35 @@ opl:PrivateUse
         skos:scopeNote          "Non-Normative"@en .   
 
 opl:Accessible
-        a                       odrl:AccessibilityTerm, skos:Concept ;
+        a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Accessibile"@en ;
         skos:definition         "Defines that the Asset is Accessible."@en ;
         skos:note               "This term is defined by OPL."@en .  
 
 opl:AccessibleWithRegistration
-        a                       odrl:AccessibilityTerm, skos:Concept ;
+        a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Accessibile with Registration"@en ;
         skos:definition         "Defines that the Asset is Accessible with Registration."@en ;
         skos:note               "This term is defined by OPL."@en .  
 
 opl:Restricted
-        a                       odrl:AccessibilityTerm, skos:Concept ;
+        a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Restricted"@en ;
         skos:definition         "Defines that the Asset is Restricted."@en ;
         skos:note               "This term is defined by OPL."@en .  
 
 opl:OtherAccess
-        a                       odrl:AccessibilityTerm, skos:Concept ;
+        a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Other Access"@en ;
         skos:definition         "Defines that the Asset is Accessible through another provider."@en ;
         skos:note               "This term is defined by OPL."@en .   
 
 opl:NotAvailable
-        a                       odrl:AccessibilityTerm, skos:Concept ;
+        a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         rdfs:label              "Not Available"@en ;
         skos:definition         "Defines that the Asset is Not Available"@en ;
@@ -117,7 +314,7 @@ opl:cc0
         odrl:permission         cc:DerivativeWorks,
                                 cc:Reproduction,
                                 cc:Distribution,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse .
 
@@ -129,11 +326,11 @@ opl:ccBy
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution .
+                                opl:ccAttribution .
 
 opl:ccBySa          
         a                       odrl:Policy ;
@@ -143,29 +340,40 @@ opl:ccBySa
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution,
+                                opl:ccAttribution,
                                 cc:ShareAlike .
 
-opl:ccByNc          
+opl:ccByNc-3          
         a                       odrl:Policy ;
-        odrl:version            "4.0" ,
-                                "3.0" ;
-        odrl:uid                "CC-BY-NC-4.0",
-                                "CC-BY-NC-3.0" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc/4.0/",
-                                "http://creativecommons.org/licenses/by-nc/3.0" ;
+        odrl:version            "3.0" ;
+        odrl:uid                "CC-BY-NC-3.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc/3.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution ;
-        odrl:prohibition        cc:CommericalUse .                    
+                                opl:ccAttribution ;
+        odrl:prohibition        cc:CommercialUse .    
+
+opl:ccByNc-4          
+        a                       odrl:Policy ;
+        odrl:version            "4.0" ;
+        odrl:uid                "CC-BY-NC-4.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc/4.0/" ;
+        odrl:permission         cc:Reproduction,
+                                cc:Distribution,
+                                cc:DerivativeWorks,
+                                opl:AcademicUse,
+                                opl:PrivateUse ;
+        odrl:obligation         cc:Notice,
+                                opl:ccAttribution ;
+        odrl:prohibition        cc:CommercialUse .
 
 opl:ccByNd          
         a                       odrl:Policy ;
@@ -174,11 +382,11 @@ opl:ccByNd
         odrl:source             "http://creativecommons.org/licenses/by-nd/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution ;
+                                opl:ccAttribution ;
         odrl:prohibition        cc:DerivativeWorks .    
 
 opl:ccByNcNd        
@@ -191,27 +399,39 @@ opl:ccByNcNd
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution;
-        odrl:prohibition        cc:CommericalUse,
+                                opl:ccAttribution ;
+        odrl:prohibition        cc:CommercialUse,
                                 cc:DerivativeWorks .  
 
-opl:ccByNcSa        
+opl:ccByNcSa-3        
         a                       odrl:Policy ;
-        odrl:version            "4.0",
-                                "3.0" ;
-        odrl:uid                "CC-BY-NC-SA-4.0",
-                                "CC-BY-NC-SA-3.0" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-                                "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
+        odrl:version            "3.0" ;
+        odrl:uid                "CC-BY-NC-SA-3.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice,
-                                cc:Attribution,
+                                opl:ccAttribution,
                                 cc:ShareAlike ;
-        odrl:prohibition        cc:CommericalUse . 
+        odrl:prohibition        cc:CommercialUse . 
+
+opl:ccByNcSa-4        
+        a                       odrl:Policy ;
+        odrl:version            "4.0" ;
+        odrl:uid                "CC-BY-NC-SA-4.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
+        odrl:permission         cc:Reproduction,
+                                cc:Distribution,
+                                cc:DerivativeWorks,
+                                opl:AcademicUse,
+                                opl:PrivateUse ;
+        odrl:obligation         cc:Notice,
+                                opl:ccAttribution,
+                                cc:ShareAlike ;
+        odrl:prohibition        cc:CommercialUse . 
 
 opl:bsd2Clause      
         a                       odrl:Policy ;
@@ -220,10 +440,13 @@ opl:bsd2Clause
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                opl:ApplyWarranty,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
-        odrl:obligation         cc:Notice .
+        odrl:obligation         opl:IncludeCopyright,
+                                opl:IncludeLicense ;
+        odrl:prohibition        opl:Liability .
 
 opl:bsd3Clause      
         a                       odrl:Policy ;
@@ -232,11 +455,14 @@ opl:bsd3Clause
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                opl:ApplyWarranty,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
-        odrl:obligation         cc:Notice ,
-                                opl:NonEndorsement .
+        odrl:obligation         opl:IncludeCopyright,
+                                opl:IncludeLicense,
+                                opl:NonEndorsement ;
+        odrl:prohibition        opl:Liability .
 
 opl:mit             
         a                       odrl:Policy ;
@@ -245,12 +471,15 @@ opl:mit
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice .
+                                opl:PrivateUse,
+                                opl:SubLicense ;
+        odrl:obligation         opl:IncludeCopyright,
+                                opl:IncludeLicense ;
+        odrl:prohibition        opl:Liability .
 
-opl:apache          
+opl:apache-2          
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
         odrl:uid                "Apache-2.0" ;
@@ -258,74 +487,120 @@ opl:apache
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution .
+                                opl:PrivateUse,
+                                opl:SubLicense,
+                                opl:PatentClaim,
+                                opl:ApplyWarranty ;
+        odrl:obligation         opl:IncludeCopyright,
+                                opl:IncludeLicense,
+                                opl:DiscloseChanges,
+                                opl:IncludeNotice ,
+                                opl:NonEndorsement ;
+        odrl:prohibition        opl:Liability .
 
-opl:ceCill          
+opl:ceCill-2          
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
-        odrl:uid                "CeCILL-Free-2.0" ;
+        odrl:uid                "CECILL-2.0" ;
         odrl:source             "https://cecill.info/licences/Licence_CeCILL_V2-en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution .
+                                opl:PrivateUse,
+                                opl:Liability ;
+        odrl:obligation         cc:SourceCode,
+                                opl:IncludeLicense,
+                                opl:IncludeNotice,
+                                opl:IncludeCopyright,
+                                opl:DiscloseChanges .
 
-opl:ceCillB         
+opl:ceCill-1        
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
-        odrl:uid                "CeCILL-B-1.0" ;
+        odrl:uid                "CECILL-1.0" ;
         odrl:source             "https://cecill.info/licences/Licence_CeCILL-B_V1-en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution .
+                                opl:PrivateUse,
+                                opl:Liability  ;
+        odrl:obligation         cc:SourceCode,
+                                opl:IncludeLicense,
+                                opl:IncludeNotice,
+                                opl:IncludeCopyright,
+                                opl:DiscloseChanges .
 
-opl:gpl             
+opl:gpl-2             
         a                       odrl:Policy ;
-        odrl:version            "2.0",
-                                "3.0" ;
-        odrl:uid                "GPL-2.0",
-                                "GPL-3.0" ;
-        odrl:source             "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html",
-                                "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
+        odrl:version            "2.0";
+        odrl:uid                "GPL-2.0-only";
+        odrl:source             "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:ShareAlike,
-                                cc:SourceCode .
+                                opl:PrivateUse,
+                                opl:ApplyWarranty ;
+        odrl:obligation         opl:IncludeOriginal,
+                                cc:SourceCode,
+                                opl:IncludeCopyright,
+                                opl:DiscloseChanges,
+                                opl:IncludeLicense ;
+        odrl:prohibition        opl:SubLicense,
+                                opl:Liability .
 
-opl:lgpl            
+opl:gpl-3             
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "LGPL-3.0" ;
+        odrl:uid                "GPL-3.0-only" ;
+        odrl:source             "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
+        odrl:permission         cc:Reproduction,
+                                cc:Distribution,
+                                cc:DerivativeWorks,
+                                cc:CommercialUse,
+                                opl:AcademicUse,
+                                opl:PrivateUse,
+                                opl:ApplyWarranty,
+                                opl:PatentClaim ;
+        odrl:obligation         opl:IncludeOriginal,
+                                opl:DiscloseChanges,
+                                opl:IncludeLicense,
+                                opl:IncludeCopyright,
+                                opl:IncludeInstructions,
+                                cc:SourceCode ;
+        odrl:prohibition        opl:SubLicense,
+                                opl:Liability .
+
+opl:lgpl-3            
+        a                       odrl:Policy ;
+        odrl:version            "3.0" ;
+        odrl:uid                "LGPL-3.0-only" ;
         odrl:source             "http://www.gnu.org/licenses/lgpl-3.0.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:ShareAlike,
-                                cc:SourceCode .
+                                opl:PrivateUse,
+                                opl:ApplyWarranty,
+                                opl:PatentClaim ;
+        odrl:obligation         opl:IncludeOriginal,
+                                opl:DiscloseChanges,
+                                opl:IncludeLicense,
+                                opl:IncludeCopyright,
+                                opl:IncludeInstructions,
+                                cc:SourceCode ;
+        odrl:prohibition        opl:SubLicense,
+                                opl:Liability .
 
-opl:mpl             
+opl:mpl-2             
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
         odrl:uid                "MPL-2.0" ;
@@ -333,13 +608,20 @@ opl:mpl
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
-                                opl:PrivateUse ;
+                                opl:PrivateUse,
+                                opl:SubLicense,
+                                opl:Warranty,
+                                opl:PatentClaim ;
         odrl:obligation         cc:SourceCode,
-                                cc:Attribution .
+                                opl:IncludeCopyright,
+                                opl:IncludeLicense,
+                                opl:IncludeOriginal,
+                                opl:NonEndorsement ;
+        odrl:prohibition        opl:Liability .
 
-opl:cernOhl         
+opl:cernOhl-1.1         
         a                       odrl:Policy ;
         odrl:version            "1.1" ;
         odrl:uid                "CERN-OHL-1.1" ;
@@ -347,25 +629,23 @@ opl:cernOhl
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution .
+        odrl:obligation         cc:Notice .
 
-opl:cernOhl         
+opl:cernOhl-1.2         
         a                       odrl:Policy ;
-        odrl:version            "1.1" ;
+        odrl:version            "1.2" ;
         odrl:uid                "CERN-OHL-1.2" ;
         odrl:source             "http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution,
+        odrl:obligation         opl:IncludeNotice,
                                 opl:NonEndorsement .
 
 opl:taprOhl         
@@ -376,11 +656,11 @@ opl:taprOhl
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse ;
-        odrl:obligation         cc:Notice,
-                                cc:Attribution .                    
+        odrl:obligation         opl:IncludeLicense,
+                                cc:ShareAlike .                    
 
 opl:dansLicense     
         a                       odrl:Policy ;
@@ -390,8 +670,8 @@ opl:dansLicense
                                 cc:DerivativeWorks,
                                 opl:AcademicUse ;
         odrl:prohibition        cc:Distribution,
-                                cc:CommericalUse ;
-        odrl:obligation         cc:Attribution .
+                                cc:CommercialUse ;
+        odrl:obligation         opl:dansAttribution .
 
 opl:cessda0                     
         a                       odrl:Policy ;
@@ -400,7 +680,7 @@ opl:cessda0
         odrl:permission         cc:DerivativeWorks,
                                 cc:Reproduction,
                                 cc:Distribution,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse .
 
@@ -421,8 +701,8 @@ opl:cessda2
                 odrl:constraint         odrl:leftOperand ;
                 odrl:leftOperand        odrl:spatial ;
                 odrl:operator           odrl:eq ;
-                odrl:rightOperand       "NO"@value,
-                                        "iso3166"@type ;
+                odrl:rightOperand       "NO"^^rdf:value,
+                                        "iso3166"^^rdf:type ;
         ] .                     
 
 opl:cessda3
@@ -433,7 +713,7 @@ opl:cessda3
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
-                                cc:CommericalUse,
+                                cc:CommercialUse,
                                 opl:AcademicUse,
                                 opl:PrivateUse .
 
@@ -442,50 +722,50 @@ opl:cessda4
         odrl:uid                "CESSDA-UKDS-GeoRestriction" ;
         odrl:source             "https://datacatalogue.cessda.eu" ;
         opl:requestAccess       "https://www.ukdataservice.ac.uk" ;
-        odrl:prohibition        cc:CommericalUse ;
+        odrl:prohibition        cc:CommercialUse ;
         odrl:obligation         [
                 odrl:constraint         odrl:leftOperand ;
                 odrl:leftOperand        odrl:spatial ;
                 odrl:operator           odrl:eq ;
-                odrl:rightOperand       "AT"@value,
-                                        "BE"@value,
-                                        "BG"@value,
-                                        "HR"@value,
-                                        "CY"@value,
-                                        "CZ"@value,
-                                        "DK"@value,
-                                        "EE"@value,
-                                        "FI"@value,
-                                        "FR"@value,
-                                        "DE"@value,
-                                        "GR"@value,
-                                        "HU"@value,
-                                        "IE"@value,
-                                        "IT"@value,
-                                        "LV"@value,
-                                        "LT"@value,
-                                        "LU"@value,
-                                        "MT"@value,
-                                        "NL"@value,
-                                        "PL"@value,
-                                        "PT"@value,
-                                        "RO"@value,
-                                        "SK"@value,
-                                        "SI"@value,
-                                        "ES"@value,
-                                        "SE"@value,
-                                        "AD"@value,
-                                        "AR"@value,
-                                        "FO"@value,
-                                        "GG"@value,
-                                        "IM"@value,
-                                        "IL"@value,
-                                        "JP"@value,
-                                        "JE"@value,
-                                        "NZ"@value,
-                                        "CH"@value,
-                                        "UY"@value,
-                                        "iso3166"@type ;
+                odrl:rightOperand       "AT"^^rdf:value,
+                                        "BE"^^rdf:value,
+                                        "BG"^^rdf:value,
+                                        "HR"^^rdf:value,
+                                        "CY"^^rdf:value,
+                                        "CZ"^^rdf:value,
+                                        "DK"^^rdf:value,
+                                        "EE"^^rdf:value,
+                                        "FI"^^rdf:value,
+                                        "FR"^^rdf:value,
+                                        "DE"^^rdf:value,
+                                        "GR"^^rdf:value,
+                                        "HU"^^rdf:value,
+                                        "IE"^^rdf:value,
+                                        "IT"^^rdf:value,
+                                        "LV"^^rdf:value,
+                                        "LT"^^rdf:value,
+                                        "LU"^^rdf:value,
+                                        "MT"^^rdf:value,
+                                        "NL"^^rdf:value,
+                                        "PL"^^rdf:value,
+                                        "PT"^^rdf:value,
+                                        "RO"^^rdf:value,
+                                        "SK"^^rdf:value,
+                                        "SI"^^rdf:value,
+                                        "ES"^^rdf:value,
+                                        "SE"^^rdf:value,
+                                        "AD"^^rdf:value,
+                                        "AR"^^rdf:value,
+                                        "FO"^^rdf:value,
+                                        "GG"^^rdf:value,
+                                        "IM"^^rdf:value,
+                                        "IL"^^rdf:value,
+                                        "JP"^^rdf:value,
+                                        "JE"^^rdf:value,
+                                        "NZ"^^rdf:value,
+                                        "CH"^^rdf:value,
+                                        "UY"^^rdf:value,
+                                        "iso3166"^^rdf:type ;
         ] .
 
 
