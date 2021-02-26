@@ -150,7 +150,7 @@ opl:dansAttribution
                                         opl:YearAttribution,
                                         opl:TitleAttribution,
                                         opl:ArchiveNameAttribution,
-                                        opl:IdentifierAttribution .
+                                        opl:IdentifierAttribution ;
         opl:hasAttributionFormat        "Doorn, dr P.K.; Bommeljé, drs L.S.; Vroom, dr J.A.C.; Wijngaarden, drs H. van; Bommeljé, drs Y.B. (1990): The Aetolian Studies Project. DANS. https://doi.org/10.17026/dans-xxu-6utq" .
 
 opl:ccAttribution
@@ -622,7 +622,7 @@ opl:mpl-2
                                 opl:NonEndorsement ;
         odrl:prohibition        opl:Liability .
 
-opl:cernOhl-1.1         
+opl:cernOhl-1_1         
         a                       odrl:Policy ;
         odrl:version            "1.1" ;
         odrl:uid                "CERN-OHL-1.1" ;
@@ -635,7 +635,7 @@ opl:cernOhl-1.1
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice .
 
-opl:cernOhl-1.2         
+opl:cernOhl-1_2         
         a                       odrl:Policy ;
         odrl:version            "1.2" ;
         odrl:uid                "CERN-OHL-1.2" ;
@@ -768,12 +768,3 @@ opl:cessda4
                                         "UY"^^rdf:value,
                                         "iso3166"^^rdf:type ;
         ] .
-
-
-
-
-        
-
-
-
-            
