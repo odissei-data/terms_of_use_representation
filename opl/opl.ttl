@@ -1,3 +1,4 @@
+@prefix opl:    <http://www.w3id.org/odissei/ns/terms_of_use_representation/>.
 @prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
