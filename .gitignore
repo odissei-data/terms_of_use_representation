@@ -1,5 +1,6 @@
 # My environment files
 config/*
+config-enabled*
 !config/*.example
 !config/.gitattributes
 !.env.example
@@ -14,3 +15,7 @@ __pycache__/
 
 # macOS files
 *.DS_Store
+
+# others
+RDF-store*
+*.pl
