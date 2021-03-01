@@ -30,7 +30,7 @@
 <urn:nbn:nl:ui:13-5o-igwy>      a                       dcat:Dataset ;
                                 dct:title               "Quantification of non-linear multiphase flow in porous media" ;
                                 dct:publisher           "https://easy.dans.knaw.nl/" ;
-                                opl:hasAccess           opl:otherAccess ;
+                                opl:hasAccess           opl:OtherAccess ;
                                 odrl:hasPolicy          opl:ccByLicense ;
                                 opl:requestAccess       "https://doi.org/10.17632/kgsh9nsdr4.2" .
 

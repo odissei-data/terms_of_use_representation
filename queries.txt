@@ -1,0 +1,21 @@
+## QUERY FOR ACCESS RETRIEVAL
+
+PREFIX opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/> 
+
+SELECT *
+WHERE {?s opl:hasAccess opl:OtherAccess}
+
+
+## QUERY FOR TITLE RETRIEVAL DEPENDING ON ACCESS
+
+PREFIX opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>
+PREFIX odrl:   <http://www.w3.org/ns/odrl/2/> 
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?s ?title
+WHERE {?s opl:hasAccess opl:OtherAccess .
+        ?s dct:title ?title
+        }
+
+
