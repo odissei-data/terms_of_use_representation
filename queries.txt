@@ -19,3 +19,12 @@ WHERE {?s opl:hasAccess opl:OtherAccess .
         }
 
 
+## QUERY FOR RETRIEVING RESOURCES THAT HAVE RETRICTED ACCESS AND ALLOW ACADEMIC USE
+
+PREFIX opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/> 
+
+SELECT *
+WHERE {?s opl:hasAccess opl:Restricted ;
+                    odrl:hasPolicy ?policy .
+               ?policy odrl:permission opl:AcademicUse }
