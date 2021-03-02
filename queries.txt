@@ -28,3 +28,15 @@ SELECT *
 WHERE {?s opl:hasAccess opl:Restricted ;
                     odrl:hasPolicy ?policy .
                ?policy odrl:permission opl:AcademicUse }
+
+
+## QUERY FOR RETRIEVING ATTRIBUTIONS BASED ON ACCESSIBILITY
+
+PREFIX opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/> 
+
+SELECT ?s ?policy ?attribution
+WHERE {?s opl:hasAccess opl:Restricted .
+               ?s odrl:hasPolicy ?policy.
+               ?policy odrl:obligation ?obligation.
+               ?obligation opl:hasAttribution ?attribution}
