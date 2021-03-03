@@ -19,3 +19,4 @@ __pycache__/
 # others
 RDF-store*
 *.pl
+*.html
