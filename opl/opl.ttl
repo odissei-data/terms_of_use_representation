@@ -160,12 +160,16 @@ opl:ccAttribution
                                 opl:LicenseNoticeAttribution,
                                 opl:LinkAttribution .
 
+opl:lissAttribution 
+        a                               opl:Attribution ;
+        opl:hasAttributionFormat        "In this paper we make use of data of the LISS (Longitudinal Internet studies for the Social Sciences) panel administered by CentERdata (Tilburg University, The Netherlands)." .     
+
 
 ## Collective Policy Vocabulary
 
 opl:NonEndorsement      
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Non-Endorsement"@en ;
         skos:definition         "Clause that prohibit the use of the Asset's name or Asset Owner's name in promotion."@en ;
         odrl:includedIn         odrl:use ;
@@ -173,7 +177,7 @@ opl:NonEndorsement
 
 opl:IncludeNotice
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Include Notice"@en ;
         skos:definition         "Must include original Notice file (if present) when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -181,7 +185,7 @@ opl:IncludeNotice
 
 opl:IncludeLicense
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Include License"@en ;
         skos:definition         "Must include original License text when distributing modified version of the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -189,7 +193,7 @@ opl:IncludeLicense
 
 opl:IncludeCopyright
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Include Copyright"@en ;
         skos:definition         "Must include original Copyright when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -197,7 +201,7 @@ opl:IncludeCopyright
 
 opl:IncludeOriginal
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Include Original"@en ;
         skos:definition         "Must include Original Asset when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -205,7 +209,7 @@ opl:IncludeOriginal
 
 opl:IncludeInstructions
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Include Instructions"@en ;
         skos:definition         "Must include Asset Instructions when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -213,7 +217,7 @@ opl:IncludeInstructions
 
 opl:DiscloseChanges
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Disclose Changes"@en ;
         skos:definition         "Disclose any significant Changes made to the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -221,7 +225,7 @@ opl:DiscloseChanges
 
 opl:ApplyWarranty
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Apply Warranty"@en ;
         skos:definition         "Ability to apply Warranty to the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -229,7 +233,7 @@ opl:ApplyWarranty
 
 opl:SubLicense
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Sub-License"@en ;
         skos:definition         "The Asset can be included in modified work where more restrictive licensing applies."@en ;
         odrl:includedIn         odrl:use ;
@@ -237,7 +241,7 @@ opl:SubLicense
 
 opl:Liability
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Liability"@en ;
         skos:definition         "The Asset owner can be charged for damages."@en ;
         odrl:includedIn         odrl:use ;
@@ -245,11 +249,19 @@ opl:Liability
 
 opl:PatentClaim
         a                       odrl:Action, skos:concept ;
-        rdfs:isDefinedBy        odrl: ;
+        rdfs:isDefinedBy        opl: ;
         rdfs:label              "Liability"@en ;
         skos:definition         "Patent Claim can be applied to contributors of the Asset."@en ;
         odrl:includedIn         odrl:use ;
         skos:scopeNote          "Non-Normative"@en . 
+
+opl:CopyRequired
+        a                       odrl:Action, skos:concept ;
+        rdfs:isDefinedBy        opl: ;
+        rdfs:label              "Copy Required"@en ;
+        skos:definition         "When a paper is written using the Asset as resources, a copy of the paper must be submitted to the data owner."@en ;
+        odrl:includeIn          odrl:use ;
+        skos:scopeNote          "Non-Normatice"@en .
 
 opl:AcademicUse
         a                       odrl:Action, skos:Concept ;
@@ -768,3 +780,16 @@ opl:cessda4
                                         "UY"^^rdf:value,
                                         "iso3166"^^rdf:type ;
         ] .
+
+opl:lissData
+        a                       odrl:Policy ;
+        odrl:uid                "LISS Data License" ;
+        odrl:source             "https://www.lissdata.nl/access-data" ;
+        opl:requestAccess       "https://statements.centerdata.nl" ;
+        odrl:permission         cc:Reproduction,
+                                cc:DerivativeWorks,
+                                opl:AcademicUse,
+                                opl:PrivateUse ;
+        odrl:prohibition        cc:CommercialUse ;
+        odrl:obligation         opl:lissAttribution,
+                                opl:CopyRequired .
