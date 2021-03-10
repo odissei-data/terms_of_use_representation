@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix doi: <http://doi.org/>.
+
+<http://doi.org/10.17026%2Fdans-zk5-883b> <ex:name> "Stichting Mondelinge Geschiedenis Indonesië\n(SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde\n(KITLV)"^^xsd:string;
+    <ex:subject> "Humanities"^^xsd:string, "History"^^xsd:string, "Social sciences"^^xsd:string, "dekolonisatie"^^xsd:string, "oral history"^^xsd:string, "koloniale samenleving"^^xsd:string, "Japanse bezetting"^^xsd:string, "Japanse capitulatie"^^xsd:string, "Bersiap"^^xsd:string, "interneringskampen"^^xsd:string, "KNIL"^^xsd:string, "Nederlands Indië"^^xsd:string, "Indonesische onafhankelijkheid"^^xsd:string, "Temporal coverage: 1940-1962"^^xsd:string.
+
+
+

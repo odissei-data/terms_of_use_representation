@@ -10,11 +10,11 @@
 
 opl:
         a                   owl:Ontology ;
-        rdfs:label          "OPL Version 0.1"@en ;
+        rdfs:label          "OPL"@en ;
         owl:versionInfo     "0.1" ;
         dct:creator         "Margherita Martorana" ;
-        dct:description     "OPL Ontology"@en ;
-        rdfs:comment        "RDF ontology for OPL Version 0.1"@en .
+        dct:description     "Ontology for Policies and Licenses."@en ;
+        rdfs:comment        "The aim of this ontology is to describe and express information about the terms of accessibility in regards to an Asset, and to build knowledge regarding licenses and terms of use upon the ODRL ontology."@en .
 
 
 ## Access
@@ -22,6 +22,7 @@ opl:
 opl:AccessibilityTerms
         a                       rdfs:Class , owl:Class, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Access"@en ;
         skos:definition         "A non-empty group of Accessibility Term."@en ;
         skos:note               "A Policy must contain an Accessibility Term."@en .
@@ -29,6 +30,7 @@ opl:AccessibilityTerms
 opl:hasAccess
         a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Target Access"@en ;
         skos:definition         "Identifies an OPL Accessibility Term Policy for which the identified Asset is the target Asset."@en ;
         skos:note               "The Asset being identified MUST be inferred to be the target Asset of the Accesibility Term."@en ;
@@ -38,6 +40,7 @@ opl:hasAccess
 opl:requestAccess       
         a                       rdf:Property, owl:ObjectProperty, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Request Access"@en ;
         skos:definition         "Define details on how access can be requested for not Accessible Assets."@en ;
         skos:note               "The Asset being identified MUST be inferred to be the target Asset of the request Access."@en ;
@@ -49,6 +52,7 @@ opl:requestAccess
 opl:Attribution 
         a                       rdfs:Class , owl:Class, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:subClassOf         odrl:Action ;
         rdfs:label              "Attribution"@en ;
         skos:definition         "Collection of Attribution types."@en .
@@ -56,6 +60,7 @@ opl:Attribution
 opl:AttributionTerms
         a                       rdfs:Class , owl:Class, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:subClassOf         odrl:Attribution ;
         rdfs:label              "Attribution Terms"@en ;
         skos:definition         "Collection of attribution action types."@en .
@@ -63,6 +68,7 @@ opl:AttributionTerms
 opl:hasAttribution
         a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Has Attribution"@en ;
         skos:definition         "Collection of attribution action types."@en ;
         rdfs:domain             odrl:Policy ;
@@ -71,6 +77,7 @@ opl:hasAttribution
 opl:hasAttributionFormat
         a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Has Attribution Format"@en ;
         skos:definition         "Description of the format regarding Attribution."@en ;
         rdfs:domain             odrl:Attribution .
@@ -81,6 +88,7 @@ opl:hasAttributionFormat
 opl:CreatorAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Creator Attribution"@en ;
         skos:definition         "Name(s) of the person(s) and/or organisations who produced the dataset." ;
         odrl:includedIn         opl:AttributionTerms .
@@ -88,6 +96,7 @@ opl:CreatorAttribution
 opl:YearAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Year Attribution"@en ;
         skos:definition         "Year in which the dataset has been produced." ;
         odrl:includedIn         opl:AttributionTerms .        
@@ -95,6 +104,7 @@ opl:YearAttribution
 opl:TitleAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Title Attribution"@en ;
         skos:definition         "Title of the dataset." ;
         odrl:includedIn         opl:AttributionTerms .   
@@ -102,6 +112,7 @@ opl:TitleAttribution
 opl:ArchiveNameAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Archive Name Attribution"@en ;
         skos:definition         "The Name of the Archive in which the dataset has been deposited." ;
         odrl:includedIn         opl:AttributionTerms .   
@@ -109,6 +120,7 @@ opl:ArchiveNameAttribution
 opl:IdentifierAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Identifier Attribution"@en ;
         skos:definition         "The persistent Identifier of the dataset, preceded by 'http://persistent-identifier.nl'." ;
         odrl:includedIn         opl:AttributionTerms . 
@@ -116,6 +128,7 @@ opl:IdentifierAttribution
 opl:CopyrightNoticeAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Copyright Notice Attribution"@en ;
         skos:definition         "The Copyright Notice applied to the dataset." ;
         odrl:includedIn         opl:AttributionTerms . 
@@ -123,6 +136,7 @@ opl:CopyrightNoticeAttribution
 opl:LicenseNoticeAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "License Notice Attribution"@en ;
         skos:definition         "The License Notice applied to the dataset." ;
         odrl:includedIn         opl:AttributionTerms . 
@@ -130,6 +144,7 @@ opl:LicenseNoticeAttribution
 opl:DisclaimerNoticeAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Disclaimer Notice Attribution"@en ;
         skos:definition         "The Disclaimer Notice applied to the dataset." ;
         odrl:includedIn         opl:AttributionTerms .
@@ -137,6 +152,7 @@ opl:DisclaimerNoticeAttribution
 opl:LinkAttribution
         a                       opl:AttributionTerms, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Link Attribution"@en ;
         skos:definition         "The Link by which the dataset can be found." ;
         odrl:includedIn         opl:AttributionTerms .
@@ -170,6 +186,7 @@ opl:lissAttribution
 opl:NonEndorsement      
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Non-Endorsement"@en ;
         skos:definition         "Clause that prohibit the use of the Asset's name or Asset Owner's name in promotion."@en ;
         odrl:includedIn         odrl:use ;
@@ -178,6 +195,7 @@ opl:NonEndorsement
 opl:IncludeNotice
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Include Notice"@en ;
         skos:definition         "Must include original Notice file (if present) when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -186,6 +204,7 @@ opl:IncludeNotice
 opl:IncludeLicense
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Include License"@en ;
         skos:definition         "Must include original License text when distributing modified version of the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -194,6 +213,7 @@ opl:IncludeLicense
 opl:IncludeCopyright
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Include Copyright"@en ;
         skos:definition         "Must include original Copyright when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -202,6 +222,7 @@ opl:IncludeCopyright
 opl:IncludeOriginal
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Include Original"@en ;
         skos:definition         "Must include Original Asset when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -210,6 +231,7 @@ opl:IncludeOriginal
 opl:IncludeInstructions
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Include Instructions"@en ;
         skos:definition         "Must include Asset Instructions when distributing."@en ;
         odrl:includedIn         odrl:use ;
@@ -218,6 +240,7 @@ opl:IncludeInstructions
 opl:DiscloseChanges
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Disclose Changes"@en ;
         skos:definition         "Disclose any significant Changes made to the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -226,6 +249,7 @@ opl:DiscloseChanges
 opl:ApplyWarranty
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Apply Warranty"@en ;
         skos:definition         "Ability to apply Warranty to the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -234,6 +258,7 @@ opl:ApplyWarranty
 opl:SubLicense
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Sub-License"@en ;
         skos:definition         "The Asset can be included in modified work where more restrictive licensing applies."@en ;
         odrl:includedIn         odrl:use ;
@@ -242,6 +267,7 @@ opl:SubLicense
 opl:Liability
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Liability"@en ;
         skos:definition         "The Asset owner can be charged for damages."@en ;
         odrl:includedIn         odrl:use ;
@@ -250,6 +276,7 @@ opl:Liability
 opl:PatentClaim
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Liability"@en ;
         skos:definition         "Patent Claim can be applied to contributors of the Asset."@en ;
         odrl:includedIn         odrl:use ;
@@ -258,6 +285,7 @@ opl:PatentClaim
 opl:CopyRequired
         a                       odrl:Action, skos:concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Copy Required"@en ;
         skos:definition         "When a paper is written using the Asset as resources, a copy of the paper must be submitted to the data owner."@en ;
         odrl:includeIn          odrl:use ;
@@ -266,6 +294,7 @@ opl:CopyRequired
 opl:AcademicUse
         a                       odrl:Action, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Academic Use"@en ;
         skos:definition         "Exercising rights for teaching/research purposes."@en ;
         skos:note               "This term is defined by OPL."@en ;
@@ -275,6 +304,7 @@ opl:AcademicUse
 opl:PrivateUse
         a                       odrl:Action, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Private Use"@en ;
         skos:definition         "Exercising rights for private purposes."@en ;
         skos:note               "This term is defined by OPL."@en ;
@@ -284,6 +314,7 @@ opl:PrivateUse
 opl:Accessible
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Accessibile"@en ;
         skos:definition         "Defines that the Asset is Accessible."@en ;
         skos:note               "This term is defined by OPL."@en .  
@@ -291,6 +322,7 @@ opl:Accessible
 opl:AccessibleWithRegistration
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Accessibile with Registration"@en ;
         skos:definition         "Defines that the Asset is Accessible with Registration."@en ;
         skos:note               "This term is defined by OPL."@en .  
@@ -298,6 +330,7 @@ opl:AccessibleWithRegistration
 opl:Restricted
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Restricted"@en ;
         skos:definition         "Defines that the Asset is Restricted."@en ;
         skos:note               "This term is defined by OPL."@en .  
@@ -305,6 +338,7 @@ opl:Restricted
 opl:OtherAccess
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Other Access"@en ;
         skos:definition         "Defines that the Asset is Accessible through another provider."@en ;
         skos:note               "This term is defined by OPL."@en .   
@@ -312,6 +346,7 @@ opl:OtherAccess
 opl:NotAvailable
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
+        skos:inScheme           opl: ;
         rdfs:label              "Not Available"@en ;
         skos:definition         "Defines that the Asset is Not Available"@en ;
         skos:note               "This term is defined by OPL."@en .                          
@@ -319,7 +354,7 @@ opl:NotAvailable
 
 ## Licenses 
 
-opl:cc0             
+<http://creativecommons.org/publicdomain/zero/1.0>             
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
         odrl:uid                "CC0-1.0" ;
