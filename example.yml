@@ -1,0 +1,28 @@
+prefixes:
+  doi: "http://doi.org/"
+  dcterms: "http://purl.org/dc/terms/"
+  dcat: "http://www.w3.org/ns/dcat#"
+  opl: "http://www.w3id.org/odissei/ns/terms_of_use_representation/"
+
+
+mappings:
+  test:
+    sources:
+      - ['dans3march.xml~xpath', 'resource']
+    s: doi:$(identifier)
+    po:
+      - [a, dcat:Dataset]
+      - [dcterms:creator, $(creators/creator/creatorName),xsd:string]
+      - [dcterms:title, $(titles/title), xsd:string]
+      - [dcterms:publisher, $(publisher), xsd:string]
+      - [dcterms:isPartOf, $(subjects/subject),xsd:string]
+      - [dcterms:contributor, $(contributors/contributor/contributorName), xsd:string]
+      - [dcterms:dateSubmitted, "$(dates/date[@dateType='Submitted'])", xsd:date]
+      - [dcterms:created, "$(dates/date[@dateType='Created'])", xsd:date]
+      - [dcterms:language, $(language), xsd:language]
+      - [dcterms:type, $(resourceType), xsd:string]
+      - [dcterms:format, $(formats/format), xsd:string]
+      - [opl:hasAccess, $(rightsList/rights), xsd:string]
+      
+      
+      

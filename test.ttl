@@ -1,10 +1,22 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix cat: <http://www.w3.org/ns/dcat#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix doi: <http://doi.org/>.
+@prefix opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>.
 
-<http://doi.org/10.17026%2Fdans-zk5-883b> <ex:name> "Stichting Mondelinge Geschiedenis Indonesië\n(SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde\n(KITLV)"^^xsd:string;
-    <ex:subject> "Humanities"^^xsd:string, "History"^^xsd:string, "Social sciences"^^xsd:string, "dekolonisatie"^^xsd:string, "oral history"^^xsd:string, "koloniale samenleving"^^xsd:string, "Japanse bezetting"^^xsd:string, "Japanse capitulatie"^^xsd:string, "Bersiap"^^xsd:string, "interneringskampen"^^xsd:string, "KNIL"^^xsd:string, "Nederlands Indië"^^xsd:string, "Indonesische onafhankelijkheid"^^xsd:string, "Temporal coverage: 1940-1962"^^xsd:string.
-
-
+<http://doi.org/10.17026%2Fdans-zk5-883b> a dcat:Dataset;
+    dcterms:creator "Stichting Mondelinge Geschiedenis Indonesië\n(SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde\n(KITLV)"^^xsd:string;
+    dcterms:title "Interviewcollectie Stichting Mondelinge Geschiedenis Indonesië,\ninterview 1005"^^xsd:string;
+    dcterms:publisher "Data Archiving and Networked Services (DANS)"^^xsd:string;
+    dcterms:isPartOf "Humanities"^^xsd:string, "History"^^xsd:string, "Social sciences"^^xsd:string, "dekolonisatie"^^xsd:string, "oral history"^^xsd:string, "koloniale samenleving"^^xsd:string, "Japanse bezetting"^^xsd:string, "Japanse capitulatie"^^xsd:string, "Bersiap"^^xsd:string, "interneringskampen"^^xsd:string, "KNIL"^^xsd:string, "Nederlands Indië"^^xsd:string, "Indonesische onafhankelijkheid"^^xsd:string, "Temporal coverage: 1940-1962"^^xsd:string;
+    dcterms:contributor "Fridus Steijlen (coördinator)"^^xsd:string;
+    dcterms:dateSubmitted "2011-09-22"^^xsd:date;
+    dcterms:created "1997-04-02"^^xsd:date;
+    dcterms:language "nl"^^xsd:language;
+    dcterms:type "Dataset"^^xsd:string;
+    dcterms:format "RTF"^^xsd:string;
+    opl:hasAccess "info:eu-repo/semantics/restrictedAccess"^^xsd:string, "DANS\nLicense"^^xsd:string.
 
