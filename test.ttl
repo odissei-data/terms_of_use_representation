@@ -6,6 +6,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix doi: <http://doi.org/>.
 @prefix opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
 
 <http://doi.org/10.17026%2Fdans-zk5-883b> a dcat:Dataset;
     dcterms:creator "Stichting Mondelinge Geschiedenis Indonesië\n(SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde\n(KITLV)"^^xsd:string;
@@ -15,8 +16,10 @@
     dcterms:contributor "Fridus Steijlen (coördinator)"^^xsd:string;
     dcterms:dateSubmitted "2011-09-22"^^xsd:date;
     dcterms:created "1997-04-02"^^xsd:date;
+    <ex:dateAvailble> "2011-08-24"^^xsd:date;
     dcterms:language "nl"^^xsd:language;
     dcterms:type "Dataset"^^xsd:string;
+    <ex:alternativeIdentifier> "URN:urn:nbn:nl:ui:13-e55r-wl"^^xsd:string, "DMO_ID:easy-dataset:46949"^^xsd:string;
     dcterms:format "RTF"^^xsd:string;
-    opl:hasAccess "info:eu-repo/semantics/restrictedAccess"^^xsd:string, "DANS\nLicense"^^xsd:string.
-
+    opl:hasAccess "info:eu-repo/semantics/restrictedAccess";
+    odrl:hasPolicy "DANS\nLicense".

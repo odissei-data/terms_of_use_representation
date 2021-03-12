@@ -3,7 +3,7 @@ prefixes:
   dcterms: "http://purl.org/dc/terms/"
   dcat: "http://www.w3.org/ns/dcat#"
   opl: "http://www.w3id.org/odissei/ns/terms_of_use_representation/"
-
+  odrl: "http://www.w3.org/ns/odrl/2/"
 
 mappings:
   test:
@@ -19,10 +19,14 @@ mappings:
       - [dcterms:contributor, $(contributors/contributor/contributorName), xsd:string]
       - [dcterms:dateSubmitted, "$(dates/date[@dateType='Submitted'])", xsd:date]
       - [dcterms:created, "$(dates/date[@dateType='Created'])", xsd:date]
+      - [ex:dateAvailble, "$(dates/date[@dateType='Available'])", xsd:date]
       - [dcterms:language, $(language), xsd:language]
       - [dcterms:type, $(resourceType), xsd:string]
+      - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
+      - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
       - [dcterms:format, $(formats/format), xsd:string]
-      - [opl:hasAccess, $(rightsList/rights), xsd:string]
+      - [opl:hasAccess, "$(rightsList/rights[1])"]
+      - [odrl:hasPolicy, "$(rightsList/rights[2])"]
       
       
       
