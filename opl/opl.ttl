@@ -531,7 +531,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
         odrl:uid                "http://www.apache.org/licenses/LICENSE-2.0" ;
-        odrl:source             "http://www.apache.org/licenses/LICENSE-2.0" ;
+        odrl:source             "https://www.apache.org/licenses/LICENSE-2.0.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -584,11 +584,11 @@ opl:NotAvailable
                                 opl:IncludeCopyright,
                                 opl:DiscloseChanges .
 
-<http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html>          
+<http://www.gnu.org/licenses/old-licenses/gpl-2.0>          
         a                       odrl:Policy ;
         odrl:version            "2.0";
-        odrl:uid                "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
-        odrl:source             "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" ;
+        odrl:uid                "http://www.gnu.org/licenses/old-licenses/gpl-2.0";
+        odrl:source             "http://www.gnu.org/licenses/old-licenses/gpl-2.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -604,11 +604,11 @@ opl:NotAvailable
         odrl:prohibition        opl:SubLicense,
                                 opl:Liability .
 
-<http://www.gnu.org/licenses/gpl-3.0.en.html>           
+<http://www.gnu.org/licenses/gpl-3.0>           
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
-        odrl:source             "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
+        odrl:uid                "http://www.gnu.org/licenses/gpl-3.0" ;
+        odrl:source             "http://www.gnu.org/licenses/gpl-3.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -626,10 +626,10 @@ opl:NotAvailable
         odrl:prohibition        opl:SubLicense,
                                 opl:Liability .
 
-<http://www.gnu.org/licenses/lgpl-3.0.txt>        
+<http://www.gnu.org/licenses/lgpl-3.0>        
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "http://www.gnu.org/licenses/lgpl-3.0.txt" ;
+        odrl:uid                "http://www.gnu.org/licenses/lgpl-3.0" ;
         odrl:source             "http://www.gnu.org/licenses/lgpl-3.0.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -648,11 +648,11 @@ opl:NotAvailable
         odrl:prohibition        opl:SubLicense,
                                 opl:Liability .
 
-<http://www.mozilla.org/en-US/MPL/2.0/FAQ/>             
+<https://mozilla.org/MPL/2.0/>             
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
-        odrl:uid                "http://www.mozilla.org/en-US/MPL/2.0/FAQ" ;
-        odrl:source             "http://www.mozilla.org/en-US/MPL/2.0/FAQ/" ;
+        odrl:uid                "https://mozilla.org/MPL/2.0/" ;
+        odrl:source             "https://mozilla.org/MPL/2.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -669,10 +669,10 @@ opl:NotAvailable
                                 opl:NonEndorsement ;
         odrl:prohibition        opl:Liability .
 
-<http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt>        
+<https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-1.1>        
         a                       odrl:Policy ;
         odrl:version            "1.1" ;
-        odrl:uid                "http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt" ;
+        odrl:uid                "https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-1.1" ;
         odrl:source             "http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -682,10 +682,10 @@ opl:NotAvailable
                                 opl:PrivateUse ;
         odrl:obligation         cc:Notice .
 
-<http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt>        
+<https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-1.2>        
         a                       odrl:Policy ;
         odrl:version            "1.2" ;
-        odrl:uid                "http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt" ;
+        odrl:uid                "https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-1.2" ;
         odrl:source             "http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -700,7 +700,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
         odrl:uid                "http://www.tapr.org/ohl.html" ;
-        odrl:source             "http://www.tapr.org/ohl.html" ;
+        odrl:source             "https://web.tapr.org/TAPR_Open_Hardware_License_v1.0.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -710,10 +710,10 @@ opl:NotAvailable
         odrl:obligation         opl:IncludeLicense,
                                 cc:ShareAlike .                    
 
-<https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf>     
+<https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>     
         a                       odrl:Policy ;
-        odrl:uid                "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
-        odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
+        odrl:uid                "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf" ;
+        odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf" ;
         odrl:permission         cc:Reproduction,
                                 cc:DerivativeWorks,
                                 opl:AcademicUse ;
