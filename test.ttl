@@ -22,4 +22,4 @@
     <ex:alternativeIdentifier> "URN:urn:nbn:nl:ui:13-e55r-wl"^^xsd:string, "DMO_ID:easy-dataset:46949"^^xsd:string;
     dcterms:format "RTF"^^xsd:string;
     opl:hasAccess "info:eu-repo/semantics/restrictedAccess";
-    odrl:hasPolicy "DANS\nLicense".
+    opl:hasPolicy "DANS\nLicense".

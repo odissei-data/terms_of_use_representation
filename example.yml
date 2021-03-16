@@ -25,8 +25,12 @@ mappings:
       - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
       - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
       - [dcterms:format, $(formats/format), xsd:string]
+      - p: opl:hasAccess
+        o:
+         - function: decide
+           parameters: 
+                     - str: "$(rightsList/rights[1])"
+                     - expectedStr: "info:eu-repo/semantics/restrictedAccess"
+                     - result: "opl:Restricted"
       - [opl:hasAccess, "$(rightsList/rights[1])"]
-      - [odrl:hasPolicy, "$(rightsList/rights[2])"]
-      
-      
-      
+      - [opl:hasPolicy, "$(rightsList/rights[2])"]
