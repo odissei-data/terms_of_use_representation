@@ -399,7 +399,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc/3.0" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc/3.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc/3.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -413,7 +413,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc/4.0/" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc/4.0/" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -427,7 +427,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nd/4.0/" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nd/4.0/" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nd/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:CommercialUse,
@@ -441,7 +441,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc-nd/4.0/" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc-nd/4.0/" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 opl:AcademicUse,
@@ -455,7 +455,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -470,7 +470,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
-        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
+        odrl:source             "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -772,48 +772,48 @@ opl:cessda4
         opl:requestAccess       "https://www.ukdataservice.ac.uk" ;
         odrl:prohibition        cc:CommercialUse ;
         odrl:obligation         [
-                odrl:constraint         odrl:leftOperand ;
-                odrl:leftOperand        odrl:spatial ;
-                odrl:operator           odrl:eq ;
-                odrl:rightOperand       "AT"^^rdf:value,
-                                        "BE"^^rdf:value,
-                                        "BG"^^rdf:value,
-                                        "HR"^^rdf:value,
-                                        "CY"^^rdf:value,
-                                        "CZ"^^rdf:value,
-                                        "DK"^^rdf:value,
-                                        "EE"^^rdf:value,
-                                        "FI"^^rdf:value,
-                                        "FR"^^rdf:value,
-                                        "DE"^^rdf:value,
-                                        "GR"^^rdf:value,
-                                        "HU"^^rdf:value,
-                                        "IE"^^rdf:value,
-                                        "IT"^^rdf:value,
-                                        "LV"^^rdf:value,
-                                        "LT"^^rdf:value,
-                                        "LU"^^rdf:value,
-                                        "MT"^^rdf:value,
-                                        "NL"^^rdf:value,
-                                        "PL"^^rdf:value,
-                                        "PT"^^rdf:value,
-                                        "RO"^^rdf:value,
-                                        "SK"^^rdf:value,
-                                        "SI"^^rdf:value,
-                                        "ES"^^rdf:value,
-                                        "SE"^^rdf:value,
-                                        "AD"^^rdf:value,
-                                        "AR"^^rdf:value,
-                                        "FO"^^rdf:value,
-                                        "GG"^^rdf:value,
-                                        "IM"^^rdf:value,
-                                        "IL"^^rdf:value,
-                                        "JP"^^rdf:value,
-                                        "JE"^^rdf:value,
-                                        "NZ"^^rdf:value,
-                                        "CH"^^rdf:value,
-                                        "UY"^^rdf:value,
-                                        "iso3166"^^rdf:type ;
+                odrl:constraint         [
+                        odrl:leftOperand        odrl:spatial ;
+                        odrl:operator           odrl:eq ;
+                        odrl:rightOperand       "http://publications.europa.eu/resource/authority/country/AUT",
+                                                "http://publications.europa.eu/resource/authority/country/BEL",
+                                                "http://publications.europa.eu/resource/authority/country/BGR",
+                                                "http://publications.europa.eu/resource/authority/country/HRV",
+                                                "http://publications.europa.eu/resource/authority/country/CYP",
+                                                "http://publications.europa.eu/resource/authority/country/CZE",
+                                                "http://publications.europa.eu/resource/authority/country/DNK",
+                                                "http://publications.europa.eu/resource/authority/country/EST",
+                                                "http://publications.europa.eu/resource/authority/country/FIN",
+                                                "http://publications.europa.eu/resource/authority/country/FRA",
+                                                "http://publications.europa.eu/resource/authority/country/DEU",
+                                                "http://publications.europa.eu/resource/authority/country/GRC",
+                                                "http://publications.europa.eu/resource/authority/country/HUN",
+                                                "http://publications.europa.eu/resource/authority/country/IRL",
+                                                "http://publications.europa.eu/resource/authority/country/ITA",
+                                                "http://publications.europa.eu/resource/authority/country/LVA",
+                                                "http://publications.europa.eu/resource/authority/country/LTU",
+                                                "http://publications.europa.eu/resource/authority/country/LUX",
+                                                "http://publications.europa.eu/resource/authority/country/MLT",
+                                                "http://publications.europa.eu/resource/authority/country/NLD",
+                                                "http://publications.europa.eu/resource/authority/country/POL",
+                                                "http://publications.europa.eu/resource/authority/country/PRT",
+                                                "http://publications.europa.eu/resource/authority/country/ROU",
+                                                "http://publications.europa.eu/resource/authority/country/SVK",
+                                                "http://publications.europa.eu/resource/authority/country/SVN",
+                                                "http://publications.europa.eu/resource/authority/country/ESP",
+                                                "http://publications.europa.eu/resource/authority/country/SWE",
+                                                "http://publications.europa.eu/resource/authority/country/AND",
+                                                "http://publications.europa.eu/resource/authority/country/ARG",
+                                                "http://publications.europa.eu/resource/authority/country/FRO",
+                                                "http://publications.europa.eu/resource/authority/country/GGY",
+                                                "http://publications.europa.eu/resource/authority/country/IMN",
+                                                "http://publications.europa.eu/resource/authority/country/ISR",
+                                                "http://publications.europa.eu/resource/authority/country/JPN",
+                                                "http://publications.europa.eu/resource/authority/country/JEY",
+                                                "http://publications.europa.eu/resource/authority/country/NZL",
+                                                "http://publications.europa.eu/resource/authority/country/CHE",
+                                                "http://publications.europa.eu/resource/authority/country/URY" 
+                ]  
         ] .
 
 <https://www.lissdata.nl/access-data>
