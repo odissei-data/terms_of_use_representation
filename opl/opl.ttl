@@ -358,7 +358,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
         odrl:uid                "http://creativecommons.org/publicdomain/zero/1.0" ;
-        odrl:source             "http://creativecommons.org/publicdomain/zero/1.0" ;
+        odrl:source             "http://creativecommons.org/publicdomain/zero/1.0/legalcode" ;
         odrl:permission         cc:DerivativeWorks,
                                 cc:Reproduction,
                                 cc:Distribution,
@@ -370,7 +370,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by/4.0" ;
-        odrl:source             "http://creativecommons.org/licenses/by/4.0" ;
+        odrl:source             "http://creativecommons.org/licenses/by/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
@@ -384,7 +384,7 @@ opl:NotAvailable
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-sa/4.0/" ;
-        odrl:source             "http://creativecommons.org/licenses/by-sa/4.0/" ;
+        odrl:source             "http://creativecommons.org/licenses/by-sa/4.0/legalcode" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
                                 cc:DerivativeWorks,
