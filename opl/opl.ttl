@@ -357,7 +357,7 @@ opl:NotAvailable
 <http://creativecommons.org/publicdomain/zero/1.0>             
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
-        odrl:uid                "CC0-1.0" ;
+        odrl:uid                "http://creativecommons.org/publicdomain/zero/1.0" ;
         odrl:source             "http://creativecommons.org/publicdomain/zero/1.0" ;
         odrl:permission         cc:DerivativeWorks,
                                 cc:Reproduction,
@@ -369,7 +369,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by/4.0>       
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by/4.0" ;
         odrl:source             "http://creativecommons.org/licenses/by/4.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -383,7 +383,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-sa/4.0/>        
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-SA-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-sa/4.0/" ;
         odrl:source             "http://creativecommons.org/licenses/by-sa/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -398,7 +398,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nc/3.0>    
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "CC-BY-NC-3.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nc/3.0" ;
         odrl:source             "http://creativecommons.org/licenses/by-nc/3.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -412,7 +412,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nc/4.0/> 
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-NC-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nc/4.0/" ;
         odrl:source             "http://creativecommons.org/licenses/by-nc/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -426,7 +426,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nd/4.0/>        
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-ND-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nd/4.0/" ;
         odrl:source             "http://creativecommons.org/licenses/by-nd/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -440,7 +440,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nc-nd/4.0/>       
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-NC-ND-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nc-nd/4.0/" ;
         odrl:source             "http://creativecommons.org/licenses/by-nc-nd/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -454,7 +454,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nc-sa/3.0>      
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "CC-BY-NC-SA-3.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
         odrl:source             "http://creativecommons.org/licenses/by-nc-sa/3.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -469,7 +469,7 @@ opl:NotAvailable
 <http://creativecommons.org/licenses/by-nc-sa/4.0/>      
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
-        odrl:uid                "CC-BY-NC-SA-4.0" ;
+        odrl:uid                "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
         odrl:source             "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -483,7 +483,7 @@ opl:NotAvailable
 
 <http://opensource.org/licenses/BSD-2-Clause>    
         a                       odrl:Policy ;
-        odrl:uid                "BSD-2-Clause" ;
+        odrl:uid                "http://opensource.org/licenses/BSD-2-Clause" ;
         odrl:source             "http://opensource.org/licenses/BSD-2-Clause" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -498,7 +498,7 @@ opl:NotAvailable
 
 <http://opensource.org/licenses/BSD-3-Clause>  
         a                       odrl:Policy ;
-        odrl:uid                "BSD-3-Clause" ;
+        odrl:uid                "http://opensource.org/licenses/BSD-3-Clause" ;
         odrl:source             "http://opensource.org/licenses/BSD-3-Clause" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -514,7 +514,7 @@ opl:NotAvailable
 
 <http://opensource.org/licenses/MIT>             
         a                       odrl:Policy ;
-        odrl:uid                "MIT" ;
+        odrl:uid                "http://opensource.org/licenses/MIT" ;
         odrl:source             "http://opensource.org/licenses/MIT" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -530,7 +530,7 @@ opl:NotAvailable
 <http://www.apache.org/licenses/LICENSE-2.0>        
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
-        odrl:uid                "Apache-2.0" ;
+        odrl:uid                "http://www.apache.org/licenses/LICENSE-2.0" ;
         odrl:source             "http://www.apache.org/licenses/LICENSE-2.0" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -551,7 +551,7 @@ opl:NotAvailable
 <https://cecill.info/licences/Licence_CeCILL_V2-en.html>         
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
-        odrl:uid                "CECILL-2.0" ;
+        odrl:uid                "https://cecill.info/licences/Licence_CeCILL_V2-en.html" ;
         odrl:source             "https://cecill.info/licences/Licence_CeCILL_V2-en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -569,7 +569,7 @@ opl:NotAvailable
 <https://cecill.info/licences/Licence_CeCILL-B_V1-en.html>      
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
-        odrl:uid                "CECILL-1.0" ;
+        odrl:uid                "https://cecill.info/licences/Licence_CeCILL-B_V1-en.html" ;
         odrl:source             "https://cecill.info/licences/Licence_CeCILL-B_V1-en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -587,7 +587,7 @@ opl:NotAvailable
 <http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html>          
         a                       odrl:Policy ;
         odrl:version            "2.0";
-        odrl:uid                "GPL-2.0-only";
+        odrl:uid                "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
         odrl:source             "http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -607,7 +607,7 @@ opl:NotAvailable
 <http://www.gnu.org/licenses/gpl-3.0.en.html>           
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "GPL-3.0-only" ;
+        odrl:uid                "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
         odrl:source             "http://www.gnu.org/licenses/gpl-3.0.en.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -629,7 +629,7 @@ opl:NotAvailable
 <http://www.gnu.org/licenses/lgpl-3.0.txt>        
         a                       odrl:Policy ;
         odrl:version            "3.0" ;
-        odrl:uid                "LGPL-3.0-only" ;
+        odrl:uid                "http://www.gnu.org/licenses/lgpl-3.0.txt" ;
         odrl:source             "http://www.gnu.org/licenses/lgpl-3.0.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -651,7 +651,7 @@ opl:NotAvailable
 <http://www.mozilla.org/en-US/MPL/2.0/FAQ/>             
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
-        odrl:uid                "MPL-2.0" ;
+        odrl:uid                "http://www.mozilla.org/en-US/MPL/2.0/FAQ" ;
         odrl:source             "http://www.mozilla.org/en-US/MPL/2.0/FAQ/" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -672,7 +672,7 @@ opl:NotAvailable
 <http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt>        
         a                       odrl:Policy ;
         odrl:version            "1.1" ;
-        odrl:uid                "CERN-OHL-1.1" ;
+        odrl:uid                "http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt" ;
         odrl:source             "http://www.ohwr.org/attachments/735/CERNOHLv1_1.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -685,7 +685,7 @@ opl:NotAvailable
 <http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt>        
         a                       odrl:Policy ;
         odrl:version            "1.2" ;
-        odrl:uid                "CERN-OHL-1.2" ;
+        odrl:uid                "http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt" ;
         odrl:source             "http://www.ohwr.org/attachments/2388/cern_ohl_v_1_2.txt" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -699,7 +699,7 @@ opl:NotAvailable
 <http://www.tapr.org/ohl.html>         
         a                       odrl:Policy ;
         odrl:version            "1.0" ;
-        odrl:uid                "TAPR-OHL-1.0" ;
+        odrl:uid                "http://www.tapr.org/ohl.html" ;
         odrl:source             "http://www.tapr.org/ohl.html" ;
         odrl:permission         cc:Reproduction,
                                 cc:Distribution,
@@ -712,7 +712,7 @@ opl:NotAvailable
 
 <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf>     
         a                       odrl:Policy ;
-        odrl:uid                "DANS License" ;
+        odrl:uid                "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
         odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/daNSLicence.pdf" ;
         odrl:permission         cc:Reproduction,
                                 cc:DerivativeWorks,
@@ -818,7 +818,7 @@ opl:cessda4
 
 <https://www.lissdata.nl/access-data>
         a                       odrl:Policy ;
-        odrl:uid                "LISS Data License" ;
+        odrl:uid                "https://www.lissdata.nl/access-data" ;
         odrl:source             "https://www.lissdata.nl/access-data" ;
         opl:requestAccess       "https://statements.centerdata.nl" ;
         odrl:permission         cc:Reproduction,
