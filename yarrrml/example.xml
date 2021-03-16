@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://datacite.org/schema/kernel-4
+http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+<identifier identifierType="DOI">10.17026/dans-zk5-883b</identifier>
+<creators>
+<creator>
+<creatorName>Stichting Mondelinge Geschiedenis Indonesië
+(SMGI)</creatorName>
+</creator>
+<creator>
+<creatorName>Koninklijk Instituut voor Taal-, Land- en Volkenkunde
+(KITLV)</creatorName>
+</creator>
+</creators>
+<titles>
+<title>Interviewcollectie Stichting Mondelinge Geschiedenis Indonesië,
+interview 1005</title>
+</titles>
+<publisher>Data Archiving and Networked Services (DANS)</publisher>
+<publicationYear>2011</publicationYear>
+<subjects>
+<subject subjectScheme="NARCIS-classification"
+schemeURI="http://www.narcis.nl/classification"
+valueURI="http://www.narcis.nl/classfication/D30000"
+xml:lang="en">Humanities</subject>
+<subject subjectScheme="NARCIS-classification"
+schemeURI="http://www.narcis.nl/classification"
+valueURI="http://www.narcis.nl/classfication/D34000"
+xml:lang="en">History</subject>
+<subject subjectScheme="NARCIS-classification"
+schemeURI="http://www.narcis.nl/classification"
+valueURI="http://www.narcis.nl/classfication/D60000"
+xml:lang="en">Social sciences</subject>
+<subject>dekolonisatie</subject>
+<subject>oral history</subject>
+<subject>koloniale samenleving</subject>
+<subject>Japanse bezetting</subject>
+<subject>Japanse capitulatie</subject>
+<subject>Bersiap</subject>
+<subject>interneringskampen</subject>
+<subject>KNIL</subject>
+<subject>Nederlands Indië</subject>
+<subject>Indonesische onafhankelijkheid</subject>
+<subject>Temporal coverage: 1940-1962</subject>
+</subjects>
+<contributors>
+<contributor contributorType="Other">
+<contributorName>Fridus Steijlen (coördinator)</contributorName>
+</contributor>
+</contributors>
+<fundingReferences></fundingReferences>
+<dates>
+<date dateType="Submitted">2011-09-22</date>
+<date dateType="Created">1997-04-02</date>
+<date dateType="Available">2011-08-24</date>
+</dates>
+<language>nl</language>
+<resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+<alternateIdentifiers>
+<alternateIdentifier
+alternateIdentifierType="URN">urn:nbn:nl:ui:13-e55r-wl</alternateIdentifier>
+<alternateIdentifier
+alternateIdentifierType="DMO_ID">easy-dataset:46949</alternateIdentifier>
+</alternateIdentifiers>
+<relatedIdentifiers></relatedIdentifiers>
+<formats>
+<format>RTF</format>
+</formats>
+<rightsList>
+<rights>info:eu-repo/semantics/restrictedAccess</rights>
+<rights
+rightsURI="https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf">DANS
+License</rights>
+</rightsList>
+<descriptions>
+<description descriptionType="Other">De geïnterviewde werkte bij
+verschillende onderdelen van het KNIL. Na de capitulatie kwam hij in een
+kamp terecht. Tijdens zijn gevangenschap kreeg hij goede connecties met
+de hogere rangen. Van de slechte omstandigheden merkt hij nog steeds de
+gevolgen. Hij vertelt over de politionele acties. Uiteindelijk verhuisde
+de geïnterviewde naar Nederland, wat hem vanwege de discriminatie erg
+teleurstelde. De echtgenote en familie van de geïnterviewde is ook
+geïnterviewd voor het SMGI-project. Zie interview 1025, 1124 en 1193.
+(Zie het veld 'relation')</description>
+</descriptions>
+<geoLocations>
+<geoLocation>
+<geoLocationPlace>Indonesië</geoLocationPlace>
+</geoLocation>
+<geoLocation>
+<geoLocationPlace>Nederland</geoLocationPlace>
+</geoLocation>
+</geoLocations>
+</resource>
