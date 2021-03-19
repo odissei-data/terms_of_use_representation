@@ -1,9 +1,11 @@
 prefixes:
-  doi: "http://doi.org/"
-  dcterms: "http://purl.org/dc/terms/"
-  dcat: "http://www.w3.org/ns/dcat#"
-  opl: "http://www.w3id.org/odissei/ns/terms_of_use_representation/"
-  odrl: "http://www.w3.org/ns/odrl/2/"
+  doi: http://doi.org/
+  dcterms: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
+  opl: http://www.w3id.org/odissei/ns/terms_of_use_representation/
+  odrl: http://www.w3.org/ns/odrl/2/
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  idlab-fn: http://example.com/idlab/function/
 
 mappings:
   test:
@@ -25,12 +27,14 @@ mappings:
       - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
       - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
       - [dcterms:format, $(formats/format), xsd:string]
-      - p: opl:hasAccess
-        o:
-         - function: decide
-           parameters: 
-                     - str: "$(rightsList/rights[1])"
-                     - expectedStr: "info:eu-repo/semantics/restrictedAccess"
-                     - result: "opl:Restricted"
-      - [opl:hasAccess, "$(rightsList/rights[1])"]
+      - predicates: opl:hasAccess
+        objects: 
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[1])"]
+                - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
+                - [idlab-fn:result, opl:Restricted]
       - [opl:hasPolicy, "$(rightsList/rights[2])"]
+      
+      
+      
