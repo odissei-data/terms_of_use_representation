@@ -1,18 +1,16 @@
 prefixes:
   doi: http://doi.org/
   dct: http://purl.org/dc/terms/
-  dcat: http://www.w3.org/ns/dcat#
   skosxl: http://www.w3.org/2008/05/skos-xl#
   disco: http://rdf-vocabulary.ddialliance.org/discovery#
   opl: http://www.w3id.org/odissei/ns/terms_of_use_representation/
   odrl: http://www.w3.org/ns/odrl/2/
-  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
   idlab-fn: http://example.com/idlab/function/
 
 mappings:
   test:
     sources:
-      - ['dans3march.xml~xpath', 'resource']
+      - ['dans.xml~xpath', 'OAI-PMH/ListRecords/record/metadata/resource']
     s: doi:$(identifier)
     po:
       - [a, disco:LogicalDataSet]
@@ -29,7 +27,7 @@ mappings:
       - [skosxl:altLabel, $(alternateIdentifiers/alternateIdentifier), xsd:string]
 #      - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
 #      - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
-      - [dcterms:format, $(formats/format), xsd:string]
+      - [dct:format, $(formats/format), xsd:string]
       - predicates: opl:hasAccess
         objects: 
             - function: idlab-fn:decide
@@ -38,12 +36,26 @@ mappings:
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
                 - [idlab-fn:result, opl:Restricted] 
               type: iri
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[1])"]
+                - [idlab-fn:expectedStr, "info:eu-repo/semantics/openAccess"]
+                - [idlab-fn:result, opl:Accessible] 
+              type: iri
       - predicates: odrl:hasPolicy
         objects:
             - function: idlab-fn:decide
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[2])"]
-                - [idlab-fn:expectedStr, "DANS\nLicense"]
+                - [idlab-fn:expectedStr, "DANS License"]
                 - [idlab-fn:result, "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf"]
               type: iri
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[2])"]
+                - [idlab-fn:expectedStr, "License: http://creativecommons.org/publicdomain/zero/1.0"]
+                - [idlab-fn:result, "http://creativecommons.org/publicdomain/zero/1.0"]
+              type: iri 
+      - 
+              
           
