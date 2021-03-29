@@ -1,7 +1,9 @@
 prefixes:
   doi: http://doi.org/
-  dcterms: http://purl.org/dc/terms/
+  dct: http://purl.org/dc/terms/
   dcat: http://www.w3.org/ns/dcat#
+  skosxl: http://www.w3.org/2008/05/skos-xl#
+  disco: http://rdf-vocabulary.ddialliance.org/discovery#
   opl: http://www.w3id.org/odissei/ns/terms_of_use_representation/
   odrl: http://www.w3.org/ns/odrl/2/
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
@@ -13,19 +15,20 @@ mappings:
       - ['dans3march.xml~xpath', 'resource']
     s: doi:$(identifier)
     po:
-      - [a, dcat:Dataset]
-      - [dcterms:creator, $(creators/creator/creatorName),xsd:string]
-      - [dcterms:title, $(titles/title), xsd:string]
-      - [dcterms:publisher, $(publisher), xsd:string]
-      - [dcterms:isPartOf, $(subjects/subject),xsd:string]
-      - [dcterms:contributor, $(contributors/contributor/contributorName), xsd:string]
-      - [dcterms:dateSubmitted, "$(dates/date[@dateType='Submitted'])", xsd:date]
-      - [dcterms:created, "$(dates/date[@dateType='Created'])", xsd:date]
-      - [ex:dateAvailble, "$(dates/date[@dateType='Available'])", xsd:date]
-      - [dcterms:language, $(language), xsd:language]
-      - [dcterms:type, $(resourceType), xsd:string]
-      - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
-      - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
+      - [a, disco:LogicalDataSet]
+      - [dct:creator, $(creators/creator/creatorName),xsd:string]
+      - [dct:title, $(titles/title), xsd:string]
+      - [dct:publisher, $(publisher), xsd:string]
+      - [dct:subject, $(subjects/subject),xsd:string]
+      - [dct:contributor, $(contributors/contributor/contributorName), xsd:string]
+      - [dct:dateSubmitted, "$(dates/date[@dateType='Submitted'])", xsd:date]
+      - [dct:created, "$(dates/date[@dateType='Created'])", xsd:date]
+      - [dct:available, "$(dates/date[@dateType='Available'])", xsd:date]
+      - [dct:language, $(language), xsd:language]
+      - [dct:type, $(resourceType), xsd:string]
+      - [skosxl:altLabel, $(alternateIdentifiers/alternateIdentifier), xsd:string]
+#      - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
+#      - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
       - [dcterms:format, $(formats/format), xsd:string]
       - predicates: opl:hasAccess
         objects: 
@@ -33,8 +36,14 @@ mappings:
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[1])"]
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
-                - [idlab-fn:result, opl:Restricted]
-      - [opl:hasPolicy, "$(rightsList/rights[2])"]
-      
-      
-      
+                - [idlab-fn:result, opl:Restricted] 
+              type: iri
+      - predicates: odrl:hasPolicy
+        objects:
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[2])"]
+                - [idlab-fn:expectedStr, "DANS\nLicense"]
+                - [idlab-fn:result, "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf"]
+              type: iri
+          
