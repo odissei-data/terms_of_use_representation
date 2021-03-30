@@ -1,7 +1,7 @@
 prefixes:
+  dans: https://example.org/dansOntology/
   doi: http://doi.org/
   dct: http://purl.org/dc/terms/
-  skosxl: http://www.w3.org/2008/05/skos-xl#
   disco: http://rdf-vocabulary.ddialliance.org/discovery#
   opl: http://www.w3id.org/odissei/ns/terms_of_use_representation/
   odrl: http://www.w3.org/ns/odrl/2/
@@ -24,9 +24,7 @@ mappings:
       - [dct:available, "$(dates/date[@dateType='Available'])", xsd:date]
       - [dct:language, $(language), xsd:language]
       - [dct:type, $(resourceType), xsd:string]
-      - [skosxl:altLabel, $(alternateIdentifiers/alternateIdentifier), xsd:string]
-#      - [ex:alternativeIdentifier, "URN:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='URN'])", xsd:string]
-#      - [ex:alternativeIdentifier, "DMO_ID:$(alternateIdentifiers/alternateIdentifier[@alternateIdentifierType='DMO_ID'])", xsd:string]
+      - [dans:easyAltId, $(alternateIdentifiers/alternateIdentifier), xsd:string]
       - [dct:format, $(formats/format), xsd:string]
       - predicates: opl:hasAccess
         objects: 
@@ -56,6 +54,7 @@ mappings:
                 - [idlab-fn:expectedStr, "License: http://creativecommons.org/publicdomain/zero/1.0"]
                 - [idlab-fn:result, "http://creativecommons.org/publicdomain/zero/1.0"]
               type: iri 
-      - 
-              
+      - [dct:description, $(descriptions/description), xsd:string]
+      - [dct:spatial, $(geoLocations/geoLocation/geoLocationPlace), xsd:string]
+               
           
