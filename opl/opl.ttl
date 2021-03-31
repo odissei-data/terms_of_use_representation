@@ -380,7 +380,7 @@ opl:NotAvailable
         odrl:obligation         cc:Notice,
                                 opl:ccAttribution .
 
-<http://creativecommons.org/licenses/by-sa/4.0/>        
+<http://creativecommons.org/licenses/by-sa/4.0>        
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-sa/4.0/" ;
@@ -409,7 +409,7 @@ opl:NotAvailable
                                 opl:ccAttribution ;
         odrl:prohibition        cc:CommercialUse .    
 
-<http://creativecommons.org/licenses/by-nc/4.0/> 
+<http://creativecommons.org/licenses/by-nc/4.0> 
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc/4.0/" ;
@@ -423,7 +423,7 @@ opl:NotAvailable
                                 opl:ccAttribution ;
         odrl:prohibition        cc:CommercialUse .
 
-<http://creativecommons.org/licenses/by-nd/4.0/>        
+<http://creativecommons.org/licenses/by-nd/4.0>        
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nd/4.0/" ;
@@ -437,7 +437,7 @@ opl:NotAvailable
                                 opl:ccAttribution ;
         odrl:prohibition        cc:DerivativeWorks .    
 
-<http://creativecommons.org/licenses/by-nc-nd/4.0/>       
+<http://creativecommons.org/licenses/by-nc-nd/4.0>       
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc-nd/4.0/" ;
@@ -466,7 +466,7 @@ opl:NotAvailable
                                 cc:ShareAlike ;
         odrl:prohibition        cc:CommercialUse . 
 
-<http://creativecommons.org/licenses/by-nc-sa/4.0/>      
+<http://creativecommons.org/licenses/by-nc-sa/4.0>      
         a                       odrl:Policy ;
         odrl:version            "4.0" ;
         odrl:uid                "http://creativecommons.org/licenses/by-nc-sa/4.0/" ;
@@ -648,7 +648,7 @@ opl:NotAvailable
         odrl:prohibition        opl:SubLicense,
                                 opl:Liability .
 
-<https://mozilla.org/MPL/2.0/>             
+<https://mozilla.org/MPL/2.0>             
         a                       odrl:Policy ;
         odrl:version            "2.0" ;
         odrl:uid                "https://mozilla.org/MPL/2.0/" ;
