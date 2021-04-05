@@ -3,6 +3,7 @@
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcat:       <http://www.w3.org/ns/dcat#> .
 @prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix euvoc:      <http://publications.europa.eu/ontology/euvoc#AccessRight> .
 
 
 ## DANS examples
@@ -10,94 +11,100 @@
 <urn:nbn:nl:ui:13-nf3q-rk>      a                       dcat:Dataset ;
                                 dcterms:title           "Mesopotamian cylinder seals: description and photographs of five seals from the NINO collection" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Accessible ;
+                                opl:hasAccess           euvoc:PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/publicdomain/zero/1.0>  .
 
 <urn:nbn:nl:ui:13-7i-kq5s>      a                       dcat:Dataset ;
                                 dcterms:title           "Data on BMI, diabetes mellitus and non-muscle invasive bladder cancer recurrence and progression from the Nijmegen Bladder Cancer study conducted in The Netherlands" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:AccessibleWithRegistration ;
+                                opl:hasAccess           opl:AccessibleWithRegistration,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-5iu-mrc>      a                       dcat:Dataset ;
                                 dcterms:title           "Inventariserend Veldonderzoek (opwaterfase) IJsselmeer, Zoekgebied Zandwinning Smals" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Restricted ;
+                                opl:hasAccess           euvoc:RESTRICTED ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-5o-igwy>      a                       dcat:Dataset ;
                                 dcterms:title           "Quantification of non-linear multiphase flow in porous media" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/licenses/by/4.0> ;
                                 opl:requestAccess       "https://doi.org/10.17632/kgsh9nsdr4.2" .
 
 <urn:nbn:nl:ui:13-ny-t4bn>      a                       dcat:Dataset ;
                                 dcterms:title           "Data from: Elevated rates of morphological and functional diversification in reef-dwelling haemulid fishes." ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/licenses/by/4.0> ;
                                 opl:requestAccess       "https://doi.org/10.5061/dryad.s049s" .
 
 <urn:nbn:nl:ui:13-xcl-hk1>      a                       dcat:Dataset ;
                                 dcterms:title           "'Haickfortz huesinge war de armen wonen'. Archeologisch onderzoek naar Hackfort's Armenhuisjes aan de Spittaalstraat in Zutphen Zutphense Archeologische Publicaties 17" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Accessible ;
+                                opl:hasAccess           euvoc:PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/publicdomain/zero/1.0> .                                
 
 <urn:nbn:nl:ui:13-6e-5hmf>      a                       dcat:Dataset ;
                                 dcterms:title           "Bureauonderzoek en Inventariserend Veldonderzoek d.m.v. boringen BO en IVO Weezenland Noord te Zwolle" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Accessible ;
+                                opl:hasAccess           euvoc:PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/publicdomain/zero/1.0> .       
 
 <urn:nbn:nl:ui:13-sr-4yfr>      a                       dcat:Dataset ;
                                 dcterms:title           "Een Bureauonderzoek en Inventariserend Veldonderzoek in de vorm van een verkennend booronderzoek" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Accessible ;
+                                opl:hasAccess           euvoc:PUBLIC ;
                                 odrl:hasPolicy          <http://creativecommons.org/publicdomain/zero/1.0> .       
 
 <urn:nbn:nl:ui:13-6n-rhhf>      a                       dcat:Dataset ;
                                 dcterms:title           "Source code for the genetic algorithm scheduler" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:AccessibleWithRegistration ;
+                                opl:hasAccess           opl:AccessibleWithRegistration ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-y3-r9bh>      a                       dcat:Dataset ;
                                 dcterms:title           "Colijnsplaat Noordlangeweg 42 Colijnsplaat, Noordlangeweg 42 Gemeente Noord-Beveland. Bureauonderzoek en Inventariserend Veldonderzoek door middel van verkennende boringen" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:AccessibleWithRegistration ;
+                                opl:hasAccess           opl:AccessibleWithRegistration ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-j0-i6nb>      a                       dcat:Dataset ;
                                 dcterms:title           "Dataset belonging to Peer status and classroom seating arrangements: A social relations analysis." ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:AccessibleWithRegistration ;
+                                opl:hasAccess           opl:AccessibleWithRegistration ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-ak-2p2y>      a                       dcat:Dataset ;
                                 dcterms:title           "Die historie vanden vromen ridder parijs ende van die schone vienna des dolphijns dochter (1487)" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Restricted ;
+                                opl:hasAccess           euvoc:RESTRICTED ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-jf-ivan>      a                       dcat:Dataset ;
                                 dcterms:title           "Olland, Pastoor Smitstraat (ongenummerd), gemeente Meierijstad Een bureauonderzoek en inventariserend veldonderzoek (BO en IVO-O)" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Restricted ;
+                                opl:hasAccess           euvoc:RESTRICTED ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-hf-iar8>      a                       dcat:Dataset ;
                                 dcterms:title           "Gemeente Epe, Plangebied N309 (km 50.9)/De Meent" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
-                                opl:hasAccess           opl:Restricted ;
+                                opl:hasAccess           euvoc:RESTRICTED ;
                                 odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
@@ -106,49 +113,57 @@
 <10.5279/DK-SA-DDA-868>         a                       dcat:Dataset ;
                                 dcterms:title           "New Production Techniques and In-Service Training" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:NotAvailable ;
+                                opl:hasAccess           opl:NotAvailable ,
+                                                        euvoc:NON_PUBLIC ;
                                 opl:hasPolicy           <http://creativecommons.org/licenses/by/4.0> .
 
 <NSD2202-2>                     a                       dcat:Dataset ;
                                 dcterms:title           "InfraRisk Module B - Calculation of Avalanche and Rockfall Prone Roads and Railways, 2010" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda1 .
 
 <10.5255/UKDA-SN-854607>        a                       dcat:Dataset ;
                                 dcterms:title           "French Historical Light Aids to Navigation (F-LAN), 1775-1929" ;
                                 dcterms:publisher        "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda3 .
 
 <10.5255/UKDA-SN-8730-2>        a                       dcat:Dataset ;
                                 dcterms:title           "Understanding Society: COVID-19 Study, 2020: Special Licence Access, School Codes" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda4 .
 
 <10.5255/UKDA-SN-8760-1>        a                       dcat:Dataset ;
                                 dcterms:title           "Quarterly Labour Force Survey, September - November, 2020" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda3 .
 
 <10.4232/1.13645>               a                       dcat:Dataset ;
                                 dcterms:title           "Trend Questions Corona (Week 32/2020)" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda0 .
 
 <NSD2892>                       a                       dcat:Dataset ;
                                 dcterms:title           "Labour Force Survey 3rd Quarter, 2020" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda2 .
 
 <NSD2904>                       a                       dcat:Dataset ;
                                 dcterms:title           "Norwegian Citizen Panel Round 18, 2020" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda1 ;
                                 odrl:permission         [
                                     odrl:constraint     odrl:leftOperand ;
@@ -161,7 +176,8 @@
 <APIS0070>                      a                       dcat:Dataset ;
                                 dcterms:title           "The influence of kill-save ratios and identifiability on moral judgments, Study 2, 2020" ;
                                 dcterms:publisher       "https://datacatalogue.cessda.eu.placeholder" ;
-                                opl:hasAccess           opl:OtherAccess ;
+                                opl:hasAccess           opl:OtherAccess ,
+                                                        euvoc:NON_PUBLIC ;
                                 odrl:hasPolicy          opl:cessda0 .
 
 
