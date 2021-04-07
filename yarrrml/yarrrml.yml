@@ -16,7 +16,8 @@ mappings:
     s: 
         function: grel:array_join
         parameters:
-            - [grel:p_array_a, [doi:, $(identifier)]]
+            - [grel:p_array_a, doi:]
+            - [grel:p_array_a, $(identifier)]
     po:
       - [a, disco:LogicalDataSet]
       - [dct:creator, $(creators/creator/creatorName),xsd:string]
