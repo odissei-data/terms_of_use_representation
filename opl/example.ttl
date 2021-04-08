@@ -26,7 +26,7 @@
                                 dcterms:title           "Inventariserend Veldonderzoek (opwaterfase) IJsselmeer, Zoekgebied Zandwinning Smals" ;
                                 dcterms:publisher       "https://easy.dans.knaw.nl/.placeholder" ;
                                 opl:hasAccess           euvoc:RESTRICTED ;
-                                odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>   ;
+                                odrl:hasPolicy          <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf> ;
                                 opl:requestAccess       "https://easy.dans.knaw.nl/.placeholder" .
 
 <urn:nbn:nl:ui:13-5o-igwy>      a                       dcat:Dataset ;
